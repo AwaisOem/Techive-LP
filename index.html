@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Techive-Society</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+<!--
+
+TemplateMo 586 Techive
+
+https://templatemo.com/tm-586-scholar
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <h1>Techive</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <!-- <div class="search-input">
+                      <form id="search" action="#" onsubmit="handleSearch(event)">
+                        <input type="text" placeholder="Type Something" id="searchText" name="searchKeyword" />
+                        <i class="fa fa-search" onclick="document.getElementById('search').submit();"></i>
+                      </form>
+                    </div> -->
+                    
+                    <div id="searchResults">
+                      <!-- Search results will be displayed here -->
+                    </div>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                      <li class="scroll-to-section"><a href="#services">Activities</a></li>
+                      <!-- <li class="scroll-to-section"><a href="#courses">Courses</a></li> -->
+                      <li class="scroll-to-section"><a href="#team">Team</a></li>
+                      <li class="scroll-to-section"><a href="#events">Events</a></li>
+                      <li class="scroll-to-section"><a href="#tally-open=wLXx1p&tally-layout=modal&tally-width=600&tally-auto-close=5000" style="cursor:pointer">Register Now!</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <script>
+    function handleSearch(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+      const searchKeyword = document.getElementById('searchText').value;
+  
+      // Example: Perform a search
+      // Replace this with your actual search logic
+      const results = searchDatabase(searchKeyword);
+  
+      // Display the results
+      displayResults(results);
+    }
+  
+    function searchDatabase(keyword) {
+      // Example search logic
+      // Replace this with your actual search logic
+      const database = [
+        { title: "Event 1", description: "Description for event 1" },
+        { title: "Event 2", description: "Description for event 2" },
+        { title: "Team Member 1", description: "Description for team member 1" },
+        { title: "Team Member 2", description: "Description for team member 2" },
+      ];
+  
+      return database.filter(item => 
+        item.title.toLowerCase().includes(keyword.toLowerCase()) || 
+        item.description.toLowerCase().includes(keyword.toLowerCase())
+      );
+    }
+  
+    function displayResults(results) {
+      const resultsContainer = document.getElementById('searchResults');
+      resultsContainer.innerHTML = ''; // Clear previous results
+  
+      if (results.length === 0) {
+        resultsContainer.innerHTML = '<p>No results found</p>';
+        return;
+      }
+  
+      results.forEach(result => {
+        const resultItem = document.createElement('div');
+        resultItem.className = 'result-item';
+        resultItem.innerHTML = `<h3>${result.title}</h3><p>${result.description}</p>`;
+        resultsContainer.appendChild(resultItem);
+      });
+    }
+  </script>
+  
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-banner">
+            <div class="item item-1">
+              <div class="header-text">
+                  <span class="category">Our Aim</span>
+                  <h2>Techive: Innovate and Learn</h2>
+                  <p>Our aim at Techive is to create a vibrant community where app developers, game developers, web developers, AI enthusiasts, and marketers can come together to shape the future of technology. We strive to foster an environment of continuous learning, collaboration, and innovation.</p>
+                  <!-- <div class="buttons">
+                      <div class="main-button">
+                          <a href="#">Join Us</a>
+                      </div>
+                      <div class="icon-button">
+                          <a href="#"><i class="fa fa-play"></i> What's Techive?</a>
+                      </div>
+                  </div> -->
+              </div>
+          </div>
+          
+            <div class="item item-2">
+              <div class="header-text">
+                <span class="category">Our Goals</span>
+                <h2>Maximize Your Potential with Techive</h2>
+                <p>At Techive, our goal is to create a vibrant community where tech enthusiasts can connect, collaborate, and grow. By providing access to resources, mentorship, and a network of like-minded individuals</p>
+                <!-- <div class="buttons">
+                  <div class="main-button">
+                    <a href="#">Join Us</a>
+                  </div>
+                  <div class="icon-button">
+                    <a href="#"><i class="fa fa-play"></i> Learn More</a>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            
+            <div class="item item-3">
+              <div class="header-text">
+                <span class="category">Our Mission </span>
+                <h2 class="white">Empowering Innovators </h2>
+                <p>Techive aims to provide a dynamic platform for developers and tech enthusiasts to collaborate, learn, and innovate. By offering a diverse range of groups in app development, game development, web development, AI, and marketing.</p>
+                
+                <!-- <div class="buttons">
+                  <div class="main-button">
+                    <a href="#">Request Demo</a>
+                  </div>
+                  <div class="icon-button">
+                    <a href="#"><i class="fa fa-play"></i> What's Online Course?</a>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-01.png" alt="Workshops">
+            </div>
+            <div class="main-content">
+              <h4>Workshops</h4>
+              <p>Organize intensive training sessions on specific topics like AI, blockchain technology, cybersecurity, and data science.</p>
+              <!-- <div class="main-button">
+                <a href="#">Read More</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-02.png" alt="Hackathons and Competitions">
+            </div>
+            <div class="main-content">
+              <h4>Competitions</h4>
+              <p>Host hackathons, coding competitions, and game development contests to encourage innovation .</p>
+              <!-- <div class="main-button">
+                <a href="#">Read More</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-03.png" alt="Tech News & Updates">
+            </div>
+            <div class="main-content">
+              <h4>Tech News and Updates</h4>
+              <p>Keep members informed about the latest trends, tools, and technologies through newsletters, blog posts, and social media updates.</p>
+              <!-- <div class="main-button">
+                <a href="#">Read More</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-04.png" alt="Mentorship Programs">
+            </div>
+            <div class="main-content">
+              <h4>Mentorship Programs</h4>
+              <p>Create mentorship programs where experienced members can guide and support newcomers or those looking to advance their skill</p>
+              <!-- <div class="main-button">
+                <a href="#">Read More</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-05.png" alt="Collaboration Projects">
+            </div>
+            <div class="main-content">
+              <h4>Collaboration Projects</h4>
+              <p>Facilitate collaborative projects among members, encouraging them to work together on real-world problems and build a portfolio.</p>
+              <!-- <div class="main-button">
+                <a href="#">Read More</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/service-06.png" alt="Collaboration with Industrys">
+            </div>
+            <div class="main-content">
+              <h4>Internships</h4>
+              <p> Partner with companies for internships, sponsored projects, and collaborative research and much more.</p>
+              <!-- <div class="main-button">
+                <a href="#">Read More</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-1">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is Techive?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Techive </strong>is a student-led society at the University of Sargodha that focuses on various technology domains, including app development, game development, web development, AI, marketing, and more.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Who can join Techive?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Any student at the University of Sargodha with an interest in technology and a desire to learn and collaborate is welcome to join Techive.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How do I join Techive?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  You can join Techive by filling out the form located at the bottom of our website and submitting it.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  How can I get help if I have questions or issues?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  You can contact us through our website, social media channels, or by reaching out to our committee members directly. We are always here to help!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>About Us</h6>
+            <h2>Why Techive Stands Out</h2>
+            <p>Welcome to Techive, the leading tech society at the University of Sargodha. We unite enthusiasts in app development, game development, web development, AI, and marketing. Our mission is to foster innovation through projects, workshops, and networking. Whether you're an experienced developer or a beginner, Techive offers the resources and community to help you succeed. Join us to learn, share, and grow together in the world of technology.</p>
+            <!-- <div class="main-button">
+                <a href="#">Discover More</a>
+            </div> -->
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fun-facts">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="counter">
+                                <h2 class="timer count-title count-number" data-to="100" data-speed="1000"></h2>
+                                <p class="count-text">Members</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="counter">
+                                <h2 class="timer count-title count-number" data-to="10" data-speed="1000"></h2>
+                                <p class="count-text">Groups</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="counter">
+                                <h2 class="timer count-title count-number" data-to="20" data-speed="1000"></h2>
+                                <p class="count-text">Skilled</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="counter end">
+                                <h2 class="timer count-title count-number" data-to="7" data-speed="1000"></h2>
+                                <p class="count-text">Workshops</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="team section" id="team">
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-heading">
+          <h6>Our Teams</h6>
+          <h2>Meet the Techive Groups</h2>
+          <p>Discover our diverse groups specializing in app development, game development, web development, AI, marketing, and more. Collaborate and innovate with us!</p>
+        </div>
+        
+      </div>
+    </div>
+      <div class="row mt-6">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/ateeb.png" alt="">
+              <span class="category">President</span>
+              <h4>Ateeb</h4>
+              <ul class="social-icons">
+                <li><a><i class="fab fa-facebook"></i></a></li>
+                <li><a><i class="fab fa-twitter"></i></a></li>
+                <li><a><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/awais.jpg" alt="">
+              <span class="category">Vice President</span>
+              <h4>Awais</h4>
+              <ul class="social-icons">
+                <li><a href="https://github.com/awaisoem/"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://x.com/awaisoem"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://linkedin.com/in/awaisoem/"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/saad.png" alt="">
+              <span class="category">General Secretary</span>
+              <h4>Saad</h4>
+              <ul class="social-icons">
+                <li><a><i class="fab fa-facebook"></i></a></li>
+                <li><a><i class="fab fa-twitter"></i></a></li>
+                <li><a><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div> 
+
+  <div class="section about-president testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="item">
+                  <p>“Techive promotes innovation by connecting developers, marketers, and AI enthusiasts. Our platform helps members improve their skills through active learning and community support.”</p>
+
+                    <div class="author">
+                        <img src="assets/images/ateeb.png" alt="President Ateeb">
+                        <span class="category">President of Techive</span>
+                        <h4>Ateeb</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 align-self-center">
+              <div class="section-heading">
+                  <h6>ABOUT OUR PRESIDENT</h6>
+                  <h2>President Ateeb on Techive</h2>
+                  <p>President Ateeb emphasizes Techive's focus on community, collaboration, and continuous learning to drive tech innovation.</p>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+</div>
+
+
+
+
+  <div class="section events" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-heading">
+                    <h6>Past Events</h6>
+                    <h2>Previously Held Events</h2>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6">
+                <div class="item">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="image">
+                                <img src="assets/images/event_ateeb.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <ul>
+                                <li>
+                                    <span class="category">The Art of Online Influence</span>
+                                    <h5 class="text-pink">Building Your Brand in the Digital Age</h5>
+                                </li>
+                                <li>
+                                    <span class="text-white">Date:</span>
+                                    <h6>8 July 2024</h6> <!-- Updated to past date -->
+                                </li>
+                                <li>
+                                    <span class="text-white">Duration:</span>
+                                    <h6>2 Days</h6>
+                                </li>
+                               
+                            </ul>
+                            <a><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6">
+                <div class="item">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="image">
+                                <img src="assets/images/event_ali.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <ul>
+                                <li>
+                                    <span class="category">Game Development</span>
+                                    <h5 class="text-pink">Basics of Game Dev  </h5>
+                                </li>
+                                <li>
+                                    <span class="text-white">Date:</span>
+                                    <h6>27 June 2024</h6>
+                                </li>
+                                <li>
+                                    <span class="text-white">Duration:</span>
+                                    <h6>2 Days</h6>
+                                </li>
+                              
+                            </ul>
+                            <a><i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+
+  <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h6>Contact Us</h6>
+            <h2>Get in Touch with Techive</h2>
+            <p>We are excited to hear from you! Whether you have questions about our sessions, want to join one of our groups, or have any other inquiries, feel free to reach out anytime.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="e3706a7f-0266-47eb-95e7-18dc7f3c3446">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <fieldset>
+                          <input type="text" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                      </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                      <fieldset>
+                          <input type="text" name="number" id="number" placeholder="Your Whatsapp Number..." required>
+                      </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                      <fieldset>
+                          <textarea name="description" id="description" placeholder="Your Query..." required></textarea>
+                      </fieldset>
+                  </div>
+                  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                  <div class="col-lg-12">
+                      <fieldset>
+                          <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+                      </fieldset>
+                  </div>
+              </div>
+          </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>
+          &copy; 2025 Techive. All rights reserved. &nbsp;&nbsp;&nbsp;
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
